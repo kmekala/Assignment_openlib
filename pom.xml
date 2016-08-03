@@ -39,9 +39,7 @@
 			<version>3.0.0</version>
 			<scope>test</scope>
 		</dependency>
-		
-       
-        <dependency>
+	   <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>

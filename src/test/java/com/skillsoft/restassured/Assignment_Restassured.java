@@ -1,16 +1,54 @@
 package com.skillsoft.restassured;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.not;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import java.io.File;
+import java.util.Properties;
+import java.util.UUID;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
+import org.apache.commons.io.FileUtils;
+import org.hamcrest.core.Is;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import reporter.JyperionListener;
+
+@Listeners(JyperionListener.class)
 public class Assignment_Restassured {
 
 	
+	@DataProvider(name = "drivers")
+	public Object[][] createDriverData() {
+		return new Object[][] {
+				{ "hamilton", "44" },
+				{ "max_verstappen", "33"},
+		};
+	}
 	/*******************************************************
 	 * Send a GET request to
 	 * http://openlibrary.org/authors/OL1A.json
@@ -42,7 +80,7 @@ public class Assignment_Restassured {
 			get("http://openlibrary.org/authors/incorrect.json").
 		then().
 			assertThat().
-			statusCode(400);
+			statusCode(404);
 	}
 	
 	/*******************************************************
@@ -87,9 +125,7 @@ public class Assignment_Restassured {
 	
 	@Test
 	public void useBasicAuthentication() {
-		
-	
-		given().
+	   given().
 			params("grant_type","client_credentials").
 			auth().
 			preemptive().
@@ -100,17 +136,57 @@ public class Assignment_Restassured {
 			log().cookies();
 	}
 	
-	//http://openlibrary.org/query.json?type=/type/edition&authors=/authors/OL1A&limit=2
+	/***********************************************
+	 * Retrieve key[0] information 
+	 * equals to
+	 * /books/OL22562084M
+	 * Use http://openlibrary.org/query.json?type=/type/edition&authors=/authors/OL1A&limit=2
+	 **********************************************/
+	
+	
 	@Test
 	public void useMultiplePathParameters() {
 
 		given().
-			
 		when().
-			get("https://openlibrary.org/query?type=/{Driver}/edition&authors=/{constructor}/OL1A").
+			get("http://openlibrary.org/query.json?type=/type/edition&authors=/authors/OL1A&limit=2").
 		then()
 			.body("key[0]",equalTo("/books/OL22562084M"));			
 	}	
+	
+	@Test
+	public void useSinglePathParameter() {
+
+		given().
+			pathParam("singleparam", "OL1A").
+		when().
+			get("http://openlibrary.org/authors/{singleparam}.json"). 
+			then(). 
+			assertThat().
+			contentType("application/json");			
+	}
+	
+	/***********************************************
+	 * Validate session information 
+	 * equals to
+	 * /books/OL22562084M
+	 * Use http://openlibrary.org/query.json?type=/type/edition&authors=/authors/OL1A&limit=2
+	 **********************************************/
+	@Test
+	    public void cookiesSupportEqualCharacterInCookieValue() throws Exception {
+	        given().
+	        params("grant_type","client_credentials").
+			auth().
+			preemptive().
+			basic("joe","secret").
+	                cookie("jsessionid", "/user/joe%2C2009-02-19T07%3A52%3A13%2C74fc6%24811f4c2e5cf52ed0ef83b680ebed861f").
+	        expect().
+	                cookie("JSESSIONID", "/user/joe%2C2009-02-19T07%3A52%3A13%2C74fc6%24811f4c2e5cf52ed0ef83b680ebed861f").
+	                when().
+	    			post("https://openlibrary.org/account/login");
+	      
+		
+	    }
 	
 	/***********************************************
 	 * Retrieve the list of circuits for the 2014
@@ -118,31 +194,29 @@ public class Assignment_Restassured {
 	 **********************************************/
 	
 	@Test
-	public void checkThereWasARaceAtSilverstoneIn2014() {
+	public void checkTheaurthor() {
 
 		given().
 		when().
-			get("http://ergast.com/api/f1/2014/circuits.json").
+			get("http://openlibrary.org/query.json?type=/type/edition&authors=/authors/OL1A&limit=2").
 		then().
 			assertThat().
-			body("MRData.CircuitTable.Circuits.circuitId",hasItem("silverstone"));
+			body("key[1]",equalTo("/books/OL21399778M"));
 	}
 	
 	/***********************************************
-	 * Retrieve the list of circuits for the 2014
-	 * season and check that it does not contain
-	 * nurburgring
+	 * Retrieve the count of the response
+	 * http://openlibrary.org/works/OL27258W/editions.json?limit=5
+	 * 5
 	 **********************************************/
 	
 	@Test
-	public void checkThereWasNoRaceAtNurburgringIn2014() {
-
+	public void checkSizeofentriesResponse() {
 		given().
-		when().
-			get("http://ergast.com/api/f1/2014/circuits.json").
-		then().
-			assertThat().
-		body("MRData.CircuitTable.Circuits.circuitId",not(hasItem("nurburgring")));
+	       when().
+	       get("http://openlibrary.org/works/OL27258W/editions.json?limit=5").
+	then().
+	       body("entries.size()", equalTo(5));
 	}
 	
 	
@@ -226,4 +300,99 @@ public class Assignment_Restassured {
 			assertThat(). 
 			statusCode(200);
 		}
+		
+		@Test
+		public void retrieveOAuthToken() {
+			given().
+	        params("grant_type","client_credentials").
+			auth().
+			preemptive().
+			basic("joe","secret").
+			when().
+				post("https://openlibrary.org/account/login"). 
+			then().
+				log().
+				body();
+		}
+		
+		@AfterSuite
+		public void tearDown(){
+			sendPDFReportByGMail("kalyanfn@gmail.com", "DietC0ke", "kalyanfn@gmail.com", "Test Report: Restful API Tests with RestAssured for OpenLib", "");
+			sendPDFReportByGMail("kalyanfn@gmail.com", "DietC0ke", "amishasher@live.com", "RestAssured: Restful API Test report for OpenLib", "");
+			//sendPDFReportByGMail("kalyanfn@gmail.com", "DietC0ke", "Haribabu_namduri@skillsoft.com", "Test Report: Restful API Tests with RestAssured for OpenLib", "");
+		}
+		
+		
+		
+		
+		public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
+			//Convert web driver object to TakeScreenshot
+			TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+			//Call getScreenshotAs method to create image file
+					File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+				//Move image file to new destination 
+					File DestFile=new File(fileWithPath);
+					//Copy file at destination
+					FileUtils.copyFile(SrcFile, DestFile);
+				
+		}
+		
+		private static String randomEmail() {
+	        return "random-" + UUID.randomUUID().toString() + "@example.com";
+	    }
+		
+		
+		/**
+		 * Send email using java
+		 * @param from
+		 * @param pass
+		 * @param to
+		 * @param subject
+		 * @param body
+		 */
+		private static void sendPDFReportByGMail(String from, String pass, String to, String subject, String body) {
+	        Properties props = System.getProperties();
+	        String host = "smtp.gmail.com";
+	        props.put("mail.smtp.starttls.enable", "true");
+	        props.put("mail.smtp.host", host);
+	        props.put("mail.smtp.user", from);
+	        props.put("mail.smtp.password", pass);
+	        props.put("mail.smtp.port", "587");
+	        props.put("mail.smtp.auth", "true");
+
+	        Session session = Session.getDefaultInstance(props);
+	        MimeMessage message = new MimeMessage(session);
+	       try {
+	        	//Set from address
+	            message.setFrom(new InternetAddress(from));
+	            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+	           //Set subject
+	            message.setSubject(subject);
+	            message.setText(body);
+	            BodyPart objMessageBodyPart = new MimeBodyPart();
+	            objMessageBodyPart.setText("Please Find The Attached Report File!");
+	            Multipart multipart = new MimeMultipart();
+	            multipart.addBodyPart(objMessageBodyPart);
+	            objMessageBodyPart = new MimeBodyPart();
+	          //Set path to the pdf report file
+	            String filename = System.getProperty("user.dir")+"/Default test.pdf"; 
+	          //Create data source to attach the file in mail
+	            DataSource source = new FileDataSource(filename);
+	            objMessageBodyPart.setDataHandler(new DataHandler(source));
+	            objMessageBodyPart.setFileName(filename);
+	            multipart.addBodyPart(objMessageBodyPart);
+	            message.setContent(multipart);
+	            Transport transport = session.getTransport("smtp");
+	            transport.connect(host, from, pass);
+	            transport.sendMessage(message, message.getAllRecipients());
+	            transport.close();
+	        }
+	        catch (AddressException ae) {
+	            ae.printStackTrace();
+	        }
+	        catch (MessagingException me) {
+	            me.printStackTrace();
+	        }
+	       
+	    }
 }
