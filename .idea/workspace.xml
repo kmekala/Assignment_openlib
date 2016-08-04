@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d12f8514-7906-4959-9766-c5b9d43c3929" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Default test.pdf" afterPath="$PROJECT_DIR$/Default test.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/skillsoft/restassured/Assignment_Restassured.java" afterPath="$PROJECT_DIR$/src/test/java/com/skillsoft/restassured/Assignment_Restassured.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/Default suite/Default test.html" afterPath="$PROJECT_DIR$/test-output/Default suite/Default test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/Default suite/Default test.xml" afterPath="$PROJECT_DIR$/test-output/Default suite/Default test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/Default suite/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/Default suite/testng-failed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.skillsoft.restassured.Assignment_Restassured.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.skillsoft.restassured.Assignment_Restassured.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Default suite/classes.html" afterPath="$PROJECT_DIR$/test-output/old/Default suite/classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Default suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/Default suite/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Default suite/methods-not-run.html" afterPath="$PROJECT_DIR$/test-output/old/Default suite/methods-not-run.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Default suite/methods.html" afterPath="$PROJECT_DIR$/test-output/old/Default suite/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Default suite/testng.xml.html" afterPath="$PROJECT_DIR$/test-output/old/Default suite/testng.xml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Default suite/toc.html" afterPath="$PROJECT_DIR$/test-output/old/Default suite/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/index.html" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
     </list>
     <ignored path="Assignment_OpenLib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,25 +24,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Assignment_Restassured.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Assignment_Restassured.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/skillsoft/restassured/Assignment_Restassured.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2010">
-              <caret line="279" column="16" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
+            <state relative-caret-position="3303">
+              <caret line="274" column="16" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#12422#12423#0" expanded="true" />
-                <element signature="e#12502#12503#0" expanded="true" />
+                <element signature="e#12361#12362#0" expanded="true" />
+                <element signature="e#12441#12442#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="-6555">
+              <caret line="39" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,8 +61,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/skillsoft/restassured/Assignment_Restassured.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -91,7 +74,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
+    <option name="x" value="-363" />
     <option name="y" value="-1417" />
     <option name="width" value="1595" />
     <option name="height" value="1377" />
@@ -136,80 +119,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Assignment_OpenLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment_OpenLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment_OpenLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment_OpenLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment_OpenLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restassured" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment_OpenLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment_OpenLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restassured" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,6 +428,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d12f8514-7906-4959-9766-c5b9d43c3929" name="Default" comment="" />
@@ -535,7 +447,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="-1417" width="1595" height="1377" extended-state="0" />
+    <frame x="-363" y="-1417" width="1595" height="1377" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -592,23 +504,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/skillsoft/restassured/Assignment_Restassured.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="3303">
+          <caret line="274" column="16" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12361#12362#0" expanded="true" />
+            <element signature="e#12441#12442#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/skillsoft/restassured/Assignment_Restassured.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="279" column="16" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12422#12423#0" expanded="true" />
-            <element signature="e#12502#12503#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-6555">
+          <caret line="39" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
