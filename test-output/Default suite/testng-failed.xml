@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.skillsoft.restassured.Assignment_Restassured">
-        <methods>
-          <include name="whenExpectationsDefinedThenAsStringReturnsCanReturnTheResponseBody"/>
-        </methods>
-      </class> <!-- com.skillsoft.restassured.Assignment_Restassured -->
+      <class name="com.skillsoft.restassured.OpenLibSeleniumTestNg"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.skillsoft.restassured.OpenLibSeleniumTestNg">
+        <methods>
+          <include name="tearDown"/>
+          <include name="openLibLogin"/>
+        </methods>
+      </class> <!-- com.skillsoft.restassured.OpenLibSeleniumTestNg -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
