@@ -3,7 +3,7 @@
 <suite name="OpenLib">
   <test name="Assignment">
     <classes>
-      <class name="com.skillsoft.restassured.Assignment_Restassured"/>
+      <class name="com.skillsoft.restassured.OpenLibSeleniumTestNg"/>
     </classes>
   </test> <!-- Assignment -->
 </suite> <!-- OpenLib -->
