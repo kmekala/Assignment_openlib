@@ -36,17 +36,17 @@ Hamcrest matchers:
 
 Examples:
  
- equalTo(X)      Does the object equal to x?
- hasItem(“X”)    Does the collection contain an item “X”
- hasSize(3)      Does the size of the collection equal to 3?
- not(equalto(X)) Inverts matcher equalTo()
+   ```equalTo(X)      Does the object equal to x?
+      hasItem(“X”)    Does the collection contain an item “X”
+      hasSize(3)      Does the size of the collection equal to 3?
+      not(equalto(X)) Inverts matcher equalTo()```
 
 http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matchers.html
 
 Gpath:
 
-  GPath is a path expression language integrated into Groovy 
-  REST Assured is built in Groovy
+  ```GPath is a path expression language integrated into Groovy 
+     REST Assured is built in Groovy```
 
   Similar aims and scope as XPath for XML
 
@@ -78,7 +78,9 @@ Executing tests in CI:
 
 To Execute the tests for RestAssured manually:
    
-   right click on RestAssured.xml and Run as TestNG Suite,  RestAssured.xml is located here src/test/resources
+   right click on RestAssured.xml and 
+   Run as TestNG Suite,  RestAssured.xml is located here 
+   src/test/resources
 
 To execute the tests from terminal: 
    
