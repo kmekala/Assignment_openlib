@@ -1,4 +1,4 @@
-# Assignment_openlib
+****_`# Assignment_openlib
 
 Preparation:
 
@@ -19,7 +19,7 @@ Tools for testing RESTful web services:
   COTS (Parasoft SOAtest, SoapUI Pro)
   ```
  
- Rest Assured:
+Rest Assured:
  
   ```
   Java library for writing tests for RESTful web services
@@ -63,7 +63,7 @@ Gpath:
   Similar aims and scope as XPath for XML
   ```
 
-  Documentation and examples:
+Documentation and examples:
    
    
     http://groovy-lang.org/processing-xml.html#_gpath
@@ -71,7 +71,7 @@ Gpath:
     
     
 
-  Validating Technical response data:
+Validating Technical response data:
    
     
     HTTP status code
@@ -128,3 +128,4 @@ To execute Selenium Testng tests:
 
 
 
+`_****
