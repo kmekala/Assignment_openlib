@@ -1,4 +1,5 @@
 # Assignment_openlib
+
 Preparation:
 
   Install Eclipse (or any other IDE)
@@ -32,7 +33,9 @@ Rest Assured Features:
 Hamcrest matchers:
  
    Express expectations in natural language
+
 Examples:
+ 
  equalTo(X)      Does the object equal to x?
  hasItem(“X”)    Does the collection contain an item “X”
  hasSize(3)      Does the size of the collection equal to 3?
@@ -67,18 +70,22 @@ Our application under test:
    API documentation at https://openlibrary.org/dev/docs/restful_api#save
   
 Executing tests in CI:
+    
     REST Assured-tests are no different from other Java (unit) tests
     Can be easily added to your CI/CD pipeline
     Part of the build process
    
 
 To Execute the tests for RestAssured manually:
+   
    right click on RestAssured.xml and Run as TestNG Suite,  RestAssured.xml is located here src/test/resources
 
 To execute the tests from terminal: 
+   
    java -cp "PATH/TO/TESTNG.jar:PATH/TO/jcommander-1.48.jar" org.testng.TestNG RestAssured.xml
    
 To execute Selenium Testng tests:
+   
    cd to the project folder
    mvn clean test
  
