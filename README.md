@@ -49,31 +49,36 @@ Examples:
       hasItem(“X”)    Does the collection contain an item “X”
       hasSize(3)      Does the size of the collection equal to 3?
       not(equalto(X)) Inverts matcher equalTo()
-   ```
+  
 
 http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matchers.html
 
+   ```
+
 Gpath:
 
-  ```GPath is a path expression language integrated into Groovy 
-     REST Assured is built in Groovy
+  ```
+  GPath is a path expression language integrated into Groovy 
+  REST Assured is built in Groovy
+  Similar aims and scope as XPath for XML
   ```
 
-  Similar aims and scope as XPath for XML
-
   Documentation and examples:
-  
+   
+   
     http://groovy-lang.org/processing-xml.html#_gpath
     http://groovy.jmiguel.eu/groovy.codehaus.org/GPath.html
+    
+    
 
-Validating Technical response data:
+  Validating Technical response data:
    
-    ```
+    
     HTTP status code
     MIME-type of received responses
     Cookies and their value
 etc.
-    ```
+    
 
 Our application under test:
 
@@ -85,11 +90,12 @@ Our application under test:
    ```
   
 Executing tests in CI:
-    ```
+    
+    
     REST Assured-tests are no different from other Java (unit) tests
     Can be easily added to your CI/CD pipeline
     Part of the build process
-   ```
+   
 
 To Execute the tests for RestAssured manually:
    
@@ -97,6 +103,7 @@ To Execute the tests for RestAssured manually:
    right click on RestAssured.xml and 
    Run as TestNG Suite,  RestAssured.xml is located here 
    src/test/resources
+   
    ```
 
 To execute the tests from terminal: 
@@ -106,6 +113,7 @@ To execute the tests from terminal:
    ```
    
 To execute Selenium Testng tests:
+   
    ```
    cd to the project folder
    mvn clean test
