@@ -25,6 +25,9 @@ To execute Selenium Testng tests:
    to 
    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/ChromeDriver/chromedriver.exe");
   
+  cd to the project folder
+  mvn clean test
+   
    ```
  
 
