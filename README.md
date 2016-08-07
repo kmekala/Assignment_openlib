@@ -13,8 +13,17 @@ Preparation:
 To execute Selenium Testng tests:
    
    ```
+   On Mac:
    cd to the project folder
    mvn clean test
+   
+   For windows:
+   
+   change line 93 in OpenLibSeleniumTestNg.java under src/test/java : 
+   System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/ChromeDriver/chromedriver");
+   to 
+   System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/ChromeDriver/chromedriver.exe");
+  
    ```
  
 
