@@ -529,7 +529,7 @@
                 <configuration>
                     <forkCount>0</forkCount>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testngWeekly.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/SeleniumTestng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
