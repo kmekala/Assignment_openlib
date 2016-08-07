@@ -14,6 +14,7 @@ To execute Selenium Testng tests:
    
    ```
    On Mac:
+   
    cd to the project folder
    mvn clean test
    
