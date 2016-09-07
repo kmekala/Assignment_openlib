@@ -129,7 +129,6 @@ public class OpenLibSeleniumTestNg {
     @AfterSuite
     public void tearDown() {
         sendPDFReportByGMail("kalyanfn@gmail.com", "DietC0ke", "kalyanfn@gmail.com","Test Report: UI Tests with Selenium Testng for OpenLib", "");
-        sendPDFReportByGMail("kalyanfn@gmail.com", "DietC0ke", "Haribabu_namduri@skillsoft.com", "Test Report: Restful API Tests with RestAssured for OpenLib", "");
     }
 
     public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
