@@ -46,36 +46,6 @@ import org.testng.annotations.Test;
 import reporter.JyperionListener;
 
 
-import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
-import org.apache.poi.ss.usermodel.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-import org.testng.annotations.*;
-
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.*;
-import javax.mail.internet.*;
-import java.awt.*;
-import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.concurrent.TimeUnit;
-
 @Listeners(JyperionListener.class)
 public class OpenLibSeleniumTestNg {
     Logger logger = Logger.getLogger(this.getClass());
@@ -89,7 +59,7 @@ public class OpenLibSeleniumTestNg {
     @Parameters ({"browser"})
     @Test
     public void openLibLogin(String browser) throws InterruptedException, MalformedURLException {
-        /*DesiredCapabilities cap = null;
+        DesiredCapabilities cap = null;
         if(browser.equalsIgnoreCase("firefox"))
         { cap = DesiredCapabilities.firefox();
             cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
@@ -126,7 +96,7 @@ public class OpenLibSeleniumTestNg {
             cap.setPlatform(Platform.ANY);
         }
         ChromeDriver driver = new ChromeDriver(cap);
-        */
+        /*
         Reporter.log("ValidatingAgent Profile with Agent login");
         String downloadFilepath = downloadPath;
         HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
@@ -140,6 +110,7 @@ public class OpenLibSeleniumTestNg {
         caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
         caps.setCapability(ChromeOptions.CAPABILITY, options);
         driver = new RemoteWebDriver(new URL("http://3csmokeui-env.us-east-1.elasticbeanstalk.com/wd/hub"), caps);
+        */
         driver.get("https://openlibrary.org/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
