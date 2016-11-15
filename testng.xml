@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="OpenLib">
   <test name="Assignment">
+     <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="com.skillsoft.restassured.OpenLibSeleniumTestNg"/>
     </classes>
