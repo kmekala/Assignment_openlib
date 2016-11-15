@@ -60,7 +60,7 @@ public class OpenLibSeleniumTestNg {
     @Parameters ({"browser"})
     @Test
     public void openLibLogin(String browser) throws InterruptedException, MalformedURLException {
-        DesiredCapabilities cap = null;
+        /*DesiredCapabilities cap = null;
         if(browser.equalsIgnoreCase("firefox"))
         { cap = DesiredCapabilities.firefox();
             cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
@@ -97,6 +97,20 @@ public class OpenLibSeleniumTestNg {
             cap.setPlatform(Platform.ANY);
         }
         ChromeDriver driver = new ChromeDriver(cap);
+        */
+        Reporter.log("ValidatingAgent Profile with Agent login");
+        String downloadFilepath = downloadPath;
+        HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+        chromePrefs.put("profile.default_content_settings.popups", 0);
+        chromePrefs.put("download.default_directory", downloadFilepath);
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", chromePrefs);
+
+
+        DesiredCapabilities caps = DesiredCapabilities.chrome();
+        caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        caps.setCapability(ChromeOptions.CAPABILITY, options);
+        driver = new RemoteWebDriver(new URL("http://3csmokeui-env.us-east-1.elasticbeanstalk.com/wd/hub"), caps);
         driver.get("https://openlibrary.org/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
